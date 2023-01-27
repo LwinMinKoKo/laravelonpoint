@@ -14,8 +14,45 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('custom');
+    return view('welcome');
 
 
 });
+
+// Define New Route
+Route::get('/custom',function() {
+    return view('custom');
+
+});
+
+
+// Define New Route 2
+Route::get('/custom_two',function() {
+    return view('custom_two');
+
+});
+
+
+// url data passing
+// Route::get('/custom/{id}',function($id) {
+//     return ("Here you type $id "); 
+// });
+
+//route naming
+Route::get('routenaming',function(){
+
+    return redirect ('custom_two');
+
+});
+
+
+// //route naming 2
+Route::get('routenaming2',function(){
+
+    return   'Welcom to naming';
+
+})->name('custom_two');
+
+
+
 
