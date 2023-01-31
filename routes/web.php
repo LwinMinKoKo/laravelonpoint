@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ArticleController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -34,9 +36,9 @@ Route::get('/custom_two',function() {
 
 
 // url data passing
-// Route::get('/custom/{id}',function($id) {
-//     return ("Here you type $id "); 
-// });
+Route::get('/custom/{id}',function($id) {
+    return ("Here you type $id "); 
+});
 
 //route naming
 Route::get('routenaming',function(){
@@ -46,13 +48,16 @@ Route::get('routenaming',function(){
 });
 
 
-// //route naming 2
+ //route naming 2
 Route::get('routenaming2',function(){
 
-    return   'Welcom to naming';
+    return   'Welcome to naming';
 
 })->name('custom_two');
 
 
-
+// working with controller
+Route::get('/', [ArticleController::class, 'index']);
+Route::get('/details',[ArticleController::class,'index']);
+Route::get('/details/{id}',[ArticleController::class,'details']);
 
