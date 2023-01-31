@@ -8,11 +8,15 @@ class ArticleController extends Controller
 {
     public function index()
     {
-        return  view ('articles.index');
+        $data=[
+            ["id"=>1,"title"=>"First Article"],
+            ["id"=>2,"title"=>"Second Article"]
+        ];
+        return view('articles.index',['articles'=> $data]);    
     }
 
     public function details($id)
     {
-        return "Controller - Artical Detail - $id";
+        return "Controller - Love you NWE - $id";
     }
 }
