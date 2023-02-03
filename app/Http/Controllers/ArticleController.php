@@ -17,6 +17,6 @@ class ArticleController extends Controller
 
     public function details($id)
     {
-        return "Controller - Love you NWE - $id";
+        return "Controller  - $id";
     }
 }

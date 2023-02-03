@@ -61,3 +61,7 @@ Route::get('/', [ArticleController::class, 'index']);
 Route::get('/details',[ArticleController::class,'index']);
 Route::get('/details/{id}',[ArticleController::class,'details']);
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
