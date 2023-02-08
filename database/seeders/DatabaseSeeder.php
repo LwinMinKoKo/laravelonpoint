@@ -18,10 +18,10 @@ class DatabaseSeeder extends Seeder
         \App\Models\Article::factory()->create
 
 ([
-            'Title' => Str::random(10),
-            'Description'=> Str::random(20),
-            'Body'=> Str::random(200),
-            'categeory_id'=>Str::random(5),
+            // 'title' => Str::random(10),
+            // 'Description'=> Str::random(20),
+            // 'Body'=> Str::random(200),
+            // 'categeory_id'=>Str::random(5),
             // 'email' => Str::random(10).'@gmail.com',
             // 'password' => Hash::make('password'),
        
