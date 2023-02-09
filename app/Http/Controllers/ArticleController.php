@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Article;
+use App\Models\Article;
 
 use Illuminate\Http\Request;
 
@@ -27,12 +27,20 @@ class ArticleController extends Controller
         public function index()
         {
             $data=Article::all();
-            return view('articles.index',[
-                'articles'=>$data]);    
+            return view('articles.index', [
+                'articles' => $data
+                ]);
+            
+            // return view('articles.index',[
+            //     'articles'=>$data]);    
+
+            // echo "Hello from Article Controller";
+            // return view ("articles.index");
+            // echo $data;
         }
 
-        public function detail($id)
-        {
-            return " controller Article - $id";
-        }
+        // public function detail($id)
+        // {
+        //     return " controller Article - $id";
+        // }
 }
