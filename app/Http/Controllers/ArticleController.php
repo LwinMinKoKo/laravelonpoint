@@ -26,21 +26,14 @@ class ArticleController extends Controller
     // create new exercisecode
         public function index()
         {
-            $data=Article::all();
-            return view('articles.index', [
-                'articles' => $data
-                ]);
-            
-            // return view('articles.index',[
-            //     'articles'=>$data]);    
-
-            // echo "Hello from Article Controller";
-            // return view ("articles.index");
-            // echo $data;
+            $data= Article::all();
+            return view('articles.index',[
+                'articles'=>$data
+            ]);
         }
 
-        // public function detail($id)
-        // {
-        //     return " controller Article - $id";
-        // }
+        public function details($id)
+        {
+            return " controller Article - $id";
+        }
 }
