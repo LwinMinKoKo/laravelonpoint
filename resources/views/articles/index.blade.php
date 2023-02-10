@@ -1,29 +1,23 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+@extends("layouts.app")
+@section("content")
 
-	<title>INDEX</title>
-</head>
-<body>
-
-	<h1>Article List</h1>
-		
-		@foreach($articles as $article)
-		<ul>
-			<li>
-				{{ $article->id }} <i><b>Title : </b></i>
-				{{ $article->title }} <br><b>Body Text :</b>
-				{{$article->Body}}
-			</li>
-		</ul>
-		@endforeach
-		
+<div class="container">
 	
-		
-	
-
-
-</body>
-</html>	
+	@foreach($articles as $article)
+		<div class="card mb-2">
+		<div class="card-body">
+		<h5 class="card-title">{{ $article->title }}</h5>
+		<div class="card-subtitle mb-2 text-muted small">
+			{{ $article->created_at->diffForHumans() }}
+			
+</div>
+<p class="card-text">{{ $article->Body }}</p>
+<a class="card-link"
+	href="{{ url("/details/$article->id") }}">
+	View Detail &raquo;
+</a>
+</div>
+</div>
+@endforeach
+</div>
+@endsection

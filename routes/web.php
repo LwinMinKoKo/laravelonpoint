@@ -15,11 +15,11 @@ use App\Http\Controllers\ArticleController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcomre');
+// Route::get('/', function () {
+//     return view('home');
 
 
-});
+// });
 
 // Define New Route
 Route::get('/custom',function() {
@@ -61,9 +61,6 @@ Route::get('/', [ArticleController::class, 'index']);
 Route::get('/details',[ArticleController::class,'index']);
 Route::get('/details/{id}',[ArticleController::class,'details']);
 
-
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-
+// Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
