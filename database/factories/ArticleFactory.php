@@ -19,7 +19,7 @@ class ArticleFactory extends Factory
         return [
             'title' => fake()->state(),
             'Body' => fake()->paragraph(),
-            'categeory_id' => fake()->buildingNumber(),
+            'category_id' => fake()->buildingNumber(),
             // 'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
             // 'remember_token' => Str::random(10),
         ];

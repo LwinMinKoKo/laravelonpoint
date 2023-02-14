@@ -64,3 +64,10 @@ Route::get('/details/{id}',[ArticleController::class,'details']);
 Auth::routes();
 
 // Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+
+//From chapter 
+Route::get('/articles/add',[ArticleController::class,'add']);
+Route::post('/articles/add',[ArticleController::class,'create']);
+Route::get('/articles/delete/{id}',[ArticleController::class,'delete']);
