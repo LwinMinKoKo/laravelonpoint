@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Article;
+use \App\Models\Article;
 
 use Illuminate\Http\Request;
 
@@ -56,13 +56,15 @@ class ArticleController extends Controller
 
         public function delete($id)
         {
-            $article=Article::find($id);
-            $article->delete();
-            // return redirect('/articles')->with('info','Items was deleted');
+            $articles=Article::find($id);
+            $articles->delete();
+            return redirect('/')->with('info','Items was deleted');
         }
 
         public function __construct()
         {
             $this->middleware('auth')->except(['index','detail']);
         }
+
+       
 }

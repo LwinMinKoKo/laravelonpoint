@@ -1,6 +1,5 @@
-@extends('layouts.app')
-@section('content')
-@section('content')
+@extends('layouts.app');
+@section('content');
 <div class="container">
 @if($errors->any())
 <div class="alert alert-warning">
@@ -38,4 +37,4 @@ class="btn btn-primary">
 </form>
 </div>
 @endsection
-@endsection 
+

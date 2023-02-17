@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CommentController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticleController;
 
@@ -60,6 +61,8 @@ Route::get('routenaming2',function(){
 Route::get('/', [ArticleController::class, 'index']);
 Route::get('/details',[ArticleController::class,'index']);
 Route::get('/details/{id}',[ArticleController::class,'details']);
+Route::post('/comments/add', [CommentController::class,'create']);
+Route::get('/comments/delete/{id}', [CommentController::class,'delete']);
 
 Auth::routes();
 
