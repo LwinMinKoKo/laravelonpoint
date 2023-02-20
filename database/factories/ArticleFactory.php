@@ -19,7 +19,7 @@ class ArticleFactory extends Factory
         return [
             'title' => fake()->state(),
             'Body' => fake()->paragraph(),
-            'category_id' => fake()->buildingNumber(),
+            'category_id' => fake()->randomDigit(),
            
         ];
     }
